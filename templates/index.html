@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% block title %}CampusCare | Grievance Portal{% endblock %}
+{% block content %}
+<section class="hero rounded-4 p-4 p-lg-5 mb-4">
+<div class="row align-items-center g-4"><div class="col-lg-7">
+<div class="eyebrow">STUDENT SUPPORT · TRANSPARENT RESOLUTION</div>
+<h1>Every concern deserves<br><span>a clear response.</span></h1>
+<p class="lead mt-3">A smarter, structured way to submit campus grievances, track progress, and connect concerns with the right department.</p>
+<div class="d-flex flex-wrap gap-2 mt-4"><a class="btn btn-primary btn-lg" href="{{ url_for('register') }}">Get Started <span aria-hidden="true">→</span></a><a class="btn btn-outline-primary btn-lg" href="{{ url_for('track_grievance') }}">Track a grievance</a></div>
+<div class="hero-note mt-4">Secure submission · Status visibility · Department routing</div>
+</div><div class="col-lg-5"><div class="hero-panel">
+<div class="panel-top"><span class="live-dot"></span> GRIEVANCE OVERVIEW <span class="ms-auto">●●●</span></div>
+<div class="panel-number">01 <small>Submit</small></div><div class="panel-line"></div>
+<div class="panel-row"><span>Smart categorization</span><b>AI-assisted</b></div><div class="panel-row"><span>Priority assessment</span><b>Structured</b></div><div class="panel-row"><span>Resolution tracking</span><b>Transparent</b></div>
+<div class="panel-bottom">CAMPUSCARE / PORTAL</div></div></div></section>
+<section class="row g-3 mb-5"><div class="col-md-4"><div class="feature-card"><div class="feature-icon">↗</div><h3>Submit securely</h3><p>Share your concern with clear details and receive a unique tracking reference.</p></div></div><div class="col-md-4"><div class="feature-card"><div class="feature-icon">⌁</div><h3>Smart routing</h3><p>ML-assisted category prediction and department recommendations support triage.</p></div></div><div class="col-md-4"><div class="feature-card"><div class="feature-icon">◷</div><h3>Track progress</h3><p>Follow status updates and see the latest resolution information.</p></div></div></section>
+<section class="section-heading mb-3"><div><div class="eyebrow">HOW IT WORKS</div><h2>From concern to resolution</h2></div><a href="{{ url_for('track_grievance') }}">Track existing request ↗</a></section>
+<div class="process-grid mb-5"><div><span>01</span><h4>Submit</h4><p>Describe the issue and select a category.</p></div><div><span>02</span><h4>Review</h4><p>AI assistance supports classification and priority assessment.</p></div><div><span>03</span><h4>Resolve</h4><p>The assigned team updates status and resolution notes.</p></div></div>
+<section class="cta-band rounded-4 p-4 p-lg-5"><div><div class="eyebrow">NEED ASSISTANCE?</div><h2>Make your concern heard.</h2><p class="mb-0">Sign in to submit a grievance or look up an existing tracking ID.</p></div><a class="btn btn-light btn-lg" href="{{ url_for('login') }}">Student portal →</a></section>
+{% endblock %}
